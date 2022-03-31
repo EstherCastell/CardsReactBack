@@ -17,5 +17,7 @@ public class DestinationTest {
         assertThat(destinations, hasProperty("title"));
         assertThat(destinations, hasProperty("imgURL"));
         assertThat(destinations.getTitle(), equalTo("beach"));
+        assertThat(destinations.getId(), equalTo(1L));
+        assertThat(destinations.getImgURL(), equalTo("beach"));
     }
     }
