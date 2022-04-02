@@ -34,15 +34,15 @@ public class DestinationServiceImp implements DestinationService {
         return destinationRepository.findAllByCategories(categories);
 
     }
-    /*@Override
-    public List<Destination> getAllByCategories(Categories categories){
-        List<Destination> destinationList = destinationRepository.findAllByCategories(categories);
-        for (Destination destination : destinationList
-        ) {destinationList.add(destination);
-        }
-        return destinationList;
-   }*/
 
+    @Override
+    public Destination createDestination(Destination destination){
+       /* destination.setId(destination.getId());
+        destination.setTitle(destination.getTitle());
+        destination.setImgURL(destination.getImgURL());
+        destination.setCategories(destination.getCategories())*/;
+        return destinationRepository.save(destination);
+    }
 }
 
 

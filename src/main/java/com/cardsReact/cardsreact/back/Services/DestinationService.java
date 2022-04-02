@@ -9,4 +9,5 @@ public interface DestinationService {
     List<Destination> getAllDestinations();
     Destination getById(Long id);
     List<Destination> getAllByCategories(Categories categories);
+    Destination createDestination(Destination destination);
 }
