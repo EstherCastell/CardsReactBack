@@ -9,8 +9,12 @@ import java.util.List;
 
 @Service
 public class DestinationServiceImp implements DestinationService {
-    @Autowired
-    DestinationRepository destinationRepository;
+
+
+    private DestinationRepository destinationRepository;
+    public DestinationServiceImp(DestinationRepository destinationRepository) {
+        this.destinationRepository = destinationRepository;
+    }
 
     @Override
     public List<Destination> getAllDestinations(){
