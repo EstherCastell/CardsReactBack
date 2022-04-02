@@ -6,6 +6,8 @@ import com.cardsReact.cardsreact.back.Repository.DestinationRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CategoriesServiceImp implements CategoriesService {
 
@@ -14,5 +16,8 @@ public class CategoriesServiceImp implements CategoriesService {
         this.categoriesRepository = categoriesRepository;}
 
     @Override
-    public Categories get(Long id){ return categoriesRepository.findById(id).get();}
+    public Categories getById(Long id){ return categoriesRepository.findById(id).get();}
+
+    @Override
+    public List<Categories> getAll(){ return categoriesRepository.findAll();}
 }

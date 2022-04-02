@@ -2,7 +2,10 @@ package com.cardsReact.cardsreact.back.Services;
 
 import com.cardsReact.cardsreact.back.Models.Categories;
 
+import java.util.List;
+
 public interface CategoriesService {
 
-   public Categories get(Long id);
+  Categories getById(Long id);
+  List<Categories> getAll();
 }
