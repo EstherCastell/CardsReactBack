@@ -22,6 +22,9 @@ public class Destination {
     private Long id;
     private String title;
     private String imgURL;
+    @ManyToOne
+    @JoinColumn(name = "categories_id")
+    private Categories categories;
 
 
 }

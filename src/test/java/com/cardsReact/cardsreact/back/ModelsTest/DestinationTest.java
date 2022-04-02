@@ -1,5 +1,6 @@
 package com.cardsReact.cardsreact.back.ModelsTest;
 
+import com.cardsReact.cardsreact.back.Models.Categories;
 import com.cardsReact.cardsreact.back.Models.Destination;
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +12,8 @@ public class DestinationTest {
     @Test
 
     void destinationsHaveIdAndName() {
-        Destination destinations = new Destination(1L,"beach", "beach");
+        Categories categories = new Categories(1L, "beach", "beach");
+        Destination destinations = new Destination(1L,"beach", "beach", categories);
 
         assertThat(destinations, hasProperty("id"));
         assertThat(destinations, hasProperty("title"));
