@@ -8,6 +8,7 @@ import lombok.Setter;
 import javax.persistence.*;
 
 
+
 @Getter
 @Setter
 @NoArgsConstructor
@@ -25,6 +26,7 @@ public class Destination {
     @ManyToOne
     @JoinColumn(name = "categories_id")
     private Categories categories;
+
 
 
 }

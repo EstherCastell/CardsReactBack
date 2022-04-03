@@ -1,5 +1,4 @@
 package com.cardsReact.cardsreact.back.Controllers;
-import com.cardsReact.cardsreact.back.Models.Categories;
 import com.cardsReact.cardsreact.back.Models.Destination;
 import com.cardsReact.cardsreact.back.Services.DestinationService;
 import org.springframework.beans.factory.annotation.Autowired;

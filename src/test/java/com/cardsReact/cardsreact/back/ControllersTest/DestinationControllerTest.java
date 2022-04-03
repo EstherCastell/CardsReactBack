@@ -11,6 +11,9 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -34,6 +37,23 @@ public class DestinationControllerTest {
         when(destinationService.getById(1L)).thenReturn(destination);
 
         mockMvc.perform(get("/destination/"+destination.getId()))
+                .andDo(print())
+                .andExpect(status().isOk());
+
+
+
+    }
+    @Test
+    void canSeeAlldestinations() throws Exception {
+        Destination destination1 = new Destination();
+        Destination destination2 = new Destination();
+        List destinationList = new ArrayList<Destination>();
+        destinationList.add(destination1);
+        destinationList.add(destination2);
+
+        when(destinationService.getAllDestinations()).thenReturn(destinationList);
+
+        mockMvc.perform(get("/destination"))
                 .andDo(print())
                 .andExpect(status().isOk());
     }
